@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: lggr
+Version: 0.2.0
+Summary: Python Logging For Humans
+Home-page: https://github.com/peterldowns/lggr
+Author: Peter Downs
+Author-email: peterldowns@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/peterldowns/lggr/tarball/v0.1.4
+Description: UNKNOWN
+Keywords: logging,log,coroutine
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

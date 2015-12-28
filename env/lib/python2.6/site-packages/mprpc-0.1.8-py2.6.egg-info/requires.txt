@@ -1,0 +1,3 @@
+gsocketpool
+gevent
+msgpack-python
