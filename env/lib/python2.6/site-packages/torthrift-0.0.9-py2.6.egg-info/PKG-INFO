@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: torthrift
+Version: 0.0.9
+Summary: Tornado asynchronous thrift server and client
+Home-page: http://github.com/snower/TorThrift
+Author: snower
+Author-email: sujian199@gmail.com
+License: MIT
+Description: torthrift - presents a Tornado Future-based API and greenlet for non-blocking thrift server and client.
+Platform: UNKNOWN
