@@ -1,0 +1,4 @@
+[console_scripts]
+ginkgo = ginkgo.runner:run_ginkgo
+ginkgoctl = ginkgo.runner:run_ginkgoctl
+

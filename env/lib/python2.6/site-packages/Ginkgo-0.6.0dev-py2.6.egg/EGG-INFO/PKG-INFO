@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: Ginkgo
+Version: 0.6.0dev
+Summary: Lightweight service framework
+Home-page: UNKNOWN
+Author: Jeff Lindsay
+Author-email: jeff.lindsay@twilio.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

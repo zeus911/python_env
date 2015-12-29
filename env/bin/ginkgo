@@ -1,0 +1,10 @@
+#!./python
+# EASY-INSTALL-ENTRY-SCRIPT: 'Ginkgo==0.6.0dev','console_scripts','ginkgo'
+__requires__ = 'Ginkgo==0.6.0dev'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('Ginkgo==0.6.0dev', 'console_scripts', 'ginkgo')()
+    )

@@ -1,0 +1,3 @@
+librabbitmq
+funtests
+_librabbitmq
