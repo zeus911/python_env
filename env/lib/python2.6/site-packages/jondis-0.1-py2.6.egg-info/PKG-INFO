@@ -1,0 +1,58 @@
+Metadata-Version: 1.0
+Name: jondis
+Version: 0.1
+Summary: Redis pool for HA redis clusters
+Home-page: https://github.com/StartTheShift/jondis
+Author: Jon Haddad
+Author-email: jon@grapheffect.com
+License: UNKNOWN
+Description: # Overview
+        
+        Jondis is a high availability pool management class for the excellent https://github.com/andymccurdy/redis-py
+        
+        # Features
+        
+        * Slave discovery on startup
+        * On master failure, if a slave is promoted, the pool will reconfigure to connect to the new master
+        
+        
+        # Limitations
+        
+        * Currently all commands are sent to the master
+        * No master discovery if only a slave server is provided
+        * In certain scenarios, the pool will pick up new slaves (if it's reconfigured), but
+          there's currently no periodic / automatic slave discovery
+        * Does not talk to sentinel
+        
+        
+        # Requirements
+        
+        redis-py
+        
+        
+        # Usage
+        
+        In order to configure the pool, you'll need to provide at least 1 active master server.  This is a limitation that
+        will be lifted soon with master discovery.
+        
+        ```python
+        from jondis.pool import Pool
+        pool = Pool(hosts=["redis01:6379","redis02:6379"])
+        redis = redis_lib.client.StrictRedis(connection_pool=pool)
+        ```
+        
+        
+        
+        
+        
+Keywords: redis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Environment :: Plugins
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
