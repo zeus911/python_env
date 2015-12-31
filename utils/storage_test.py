@@ -51,14 +51,14 @@ class Test(object):
 
 if __name__ == "__main__":
     test = Test()
-    #disks = test.listDisks()
+    disks = test.listDisks()
     volumeGroups = test.volumeGroups()
+     
+    for disk in disks:
+        test.listPartitions(disk)
 
-    #for disk in disks:
-    #    test.listPartitions(disk)
-
-    #for disk in disks:
-    #    physicalVolumes = test.physicalVolumes(disk)
+    for disk in disks:
+        physicalVolumes = test.physicalVolumes(disk)
 
     lvs = test.logicalVolumes()
 #    test.removeLV(lvs[0])

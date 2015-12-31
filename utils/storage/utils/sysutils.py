@@ -7,6 +7,22 @@ import os
 import sys
 log = logging.getLogger("sysutils")
 
+def find_executable(exec_name):
+    """find the given executable in PATH"""
+
+    # preppend /bin, /sbin explicitly to handle system configuration
+    # errors
+    paths = ["/bin", "/sbin","/usr/bin",'/usr/sbin']
+
+    paths.extend(os.getenv("PATH").split(':'))
+
+    for p in paths:
+        exec_path = os.path.join(p, exec_name)
+        if os.path.exists(exec_path):
+            return exec_path
+
+    return None
+
 def checkNumeric(num):
     if num is None:
         num =  0

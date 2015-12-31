@@ -221,9 +221,10 @@ def vginfo(vg_name):
             ["-o", "name,size,uuid,max_pv,pv_count,vg_extent_size,vg_extent_count,vg_free_count,vg_free,max_lv"] + \
             config_args + \
             [vg_name]
-
+    
     buffer = _lvmcapture(args)
-
+    if not buffer:
+	return buffer
     #print "buffer:%s" % buffer
     buffer_dict = buffer.split()
     if len(buffer_dict) != 10:
