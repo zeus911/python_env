@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #
 
-from errors import LVMError
-from utils import sysutils
+from ..errors import LVMError
+from ..utils import sysutils
 import re
 import gettext
 
@@ -226,7 +226,6 @@ def vginfo(vg_name):
 
     #print "buffer:%s" % buffer
     buffer_dict = buffer.split()
-    #print "len(buffer_dict) :%d" % len(buffer_dict) 
     if len(buffer_dict) != 10:
         raise LVMError(_("vginfo failed for %s" % vg_name))
 

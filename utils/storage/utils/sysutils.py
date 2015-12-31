@@ -2,7 +2,6 @@
 #
 
 import subprocess
-from pardus.sysutils import find_executable
 import logging
 import os
 import sys

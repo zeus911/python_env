@@ -9,7 +9,7 @@
 #
 # Please read the COPYING file.
 
-from errors import MDRaidError
+from ..errors import MDRaidError
 import logging
 import sysutils
 

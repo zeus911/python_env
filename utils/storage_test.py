@@ -1,15 +1,6 @@
 # -*- coding: utf-8 -*-
-#
-# Copyright (C) 2005-2009, TUBITAK/UEKAE
-#
-# This program is free software; you can redistribute it and/or modify it under
-# the terms of the GNU General Public License as published by the Free
-# Software Foundation; either version 2 of the License, or (at your option)
-# any later version.
-#
-# Please read the COPYING file.
 
-from storage import Storage
+from storage.storage import Storage
 import parted
 
 class Test(object):
@@ -70,7 +61,7 @@ if __name__ == "__main__":
     #    physicalVolumes = test.physicalVolumes(disk)
 
     lvs = test.logicalVolumes()
-    test.removeLV(lvs[0])
+#    test.removeLV(lvs[0])
     #for disk in disks:
      #   if disk.path == "/dev/sdd":
      #       partition = test.getDiskPartition(disk.path, -1)

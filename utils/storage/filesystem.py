@@ -25,7 +25,7 @@ import string
 import parted
 import math
 
-from errors import rror, FileSystemError
+from errors import PareError, FileSystemError
 import utils.sysutils as sysutils
 import logging
 log = logging.getLogger("filesystem")
@@ -79,7 +79,7 @@ class FileSystem:
 
     def openPartition(self, partition):
         """ Checks if partition exists or not;
-            If not,it causes rror """
+            If not,it causes PareError """
         try:
             fd = os.open(partition.path, os.O_RDONLY)
             return fd
@@ -170,7 +170,7 @@ class FileSystem:
     def preFormat(self, partition):
         """ Necessary checks before formatting """
         if not self.isImplemented():
-            raise rror, "%s file system is not fully implemented." % (self.name)
+            raise PareError, "%s file system is not fully implemented." % (self.name)
 
 
         log.info("Format %s: %s" %(partition.path, self.name))
@@ -230,7 +230,7 @@ class FileSystem:
 
         res = sysutils.run(cmd)
         if not res:
-            raise rror, "%s format failed: %s" % (self.name, partition.path)
+            raise PareError, "%s format failed: %s" % (self.name, partition.path)
 
         # for Disabling Lengthy Boot-Time Checks
         self.tune2fs(partition)
@@ -242,7 +242,7 @@ class FileSystem:
         cmd = "%s -c 0 -i 6m %s" % (cmd_path, partition.path)
         res = sysutils.run(cmd)
         if not res:
-            raise rror, "tune2fs tuning failed: %s" % partition.path
+            raise PareError, "tune2fs tuning failed: %s" % partition.path
 
     def minResizeMB(self, partition):
         """ Get minimum resize size (mb) for given partition """

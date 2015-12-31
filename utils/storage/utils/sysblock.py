@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 #
 
-from diskdevice import Disk
-from lvmdevice import LogicalVolume, VolumeGroup
-from utils import lvm
-from errors import *
+from ..diskdevice import Disk
+from ..lvmdevice import LogicalVolume, VolumeGroup
+from ..utils import lvm
+from ..errors import *
 import os
 import glob
 
