@@ -25,4 +25,5 @@ class vlan():
         rem_vlan_cmd = "if [[ -e /proc/net/vlan/%s ]];then vconfig rem %s;fi"
         iface = "%s.%s" % (iface, id)
         os.popen(rem_vlan_cmd % (iface, iface)).read()
-        logging.debug("remove vlan %s" % iface)
+	logging.debug("remove vlan %s" % iface)
+
