@@ -1,0 +1,3 @@
+[console_scripts]
+pyconfd = pyconfd.core:main
+
