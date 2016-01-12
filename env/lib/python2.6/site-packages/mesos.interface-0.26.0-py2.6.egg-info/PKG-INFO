@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: mesos.interface
+Version: 0.26.0
+Summary: Mesos interfaces
+Home-page: http://pypi.python.org/pypi/mesos.interface
+Author: Apache Mesos
+Author-email: dev@mesos.apache.org
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: mesos
+Platform: UNKNOWN

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: py-zabbix
+Version: 0.6.1
+Summary: Python modules for work with zabbix.
+Home-page: https://github.com/blacked/py-zabbix
+Author: Alexey Dubkov
+Author-email: alexey.dubkov@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

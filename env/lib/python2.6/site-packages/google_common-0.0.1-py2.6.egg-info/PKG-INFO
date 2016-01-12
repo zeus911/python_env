@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: google-common
+Version: 0.0.1
+Summary: Google namespace package
+Home-page: http://pypi.python.org/pypi/google-common
+Author: haosdent
+Author-email: haosdent@gmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: google,namespace
+Platform: UNKNOWN

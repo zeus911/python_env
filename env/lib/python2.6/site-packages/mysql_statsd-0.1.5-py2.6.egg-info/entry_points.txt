@@ -1,0 +1,3 @@
+[console_scripts]
+mysql_statsd = mysql_statsd:mysql_statsd.MysqlStatsd
+

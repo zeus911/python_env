@@ -1,4 +1,4 @@
-#!./python
+#!/home/xianhua/python_env/env/bin/python
 
 import argparse
 import code
@@ -55,9 +55,11 @@ def parse_args():
     parser.add_argument("-o", "--origin",
                         help="Set origin")
     parser.add_argument("--eof-wait", default=0, type=int,
-                        help="wait time(second) after 'EOF' recieved.")
+                        help="wait time(second) after 'EOF' received.")
     parser.add_argument("-t", "--text",
                         help="Send initial text")
+    parser.add_argument("--timings", action="store_true",
+                        help="Print timings in seconds")
 
     return parser.parse_args()
 
@@ -96,6 +98,7 @@ class NonInteractive(RawInput):
         return self.raw_input("")
 
 def main():
+    start_time = time.time()
     args = parse_args()
     if args.verbose > 1:
         websocket.enableTrace(True)
@@ -149,7 +152,10 @@ def main():
                 msg = "%s: %s" % (websocket.ABNF.OPCODE_MAP.get(opcode), data)
 
             if msg is not None:
-                console.write(msg)
+                if (args.timings):
+                    console.write(str(time.time() - start_time) + ": " + msg)
+                else:
+                    console.write(msg)
 
             if opcode == websocket.ABNF.OPCODE_CLOSE:
                 break

@@ -1,0 +1,2 @@
+argparse
+py-zabbix>=0.5.6

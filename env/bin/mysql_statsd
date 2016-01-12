@@ -1,0 +1,10 @@
+#!/home/xianhua/python_env/env/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'mysql-statsd==0.1.5','console_scripts','mysql_statsd'
+__requires__ = 'mysql-statsd==0.1.5'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('mysql-statsd==0.1.5', 'console_scripts', 'mysql_statsd')()
+    )
