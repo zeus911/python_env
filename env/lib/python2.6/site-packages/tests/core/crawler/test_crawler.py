@@ -1,0 +1,33 @@
+import unittest
+
+import mock
+
+from tests.mock import mock_factory
+from xcrawler.core.crawler.crawler import XCrawler
+from xcrawler.core.crawler.config import Config
+from xcrawler.threads.work_executor import WorkExecutor
+from xcrawler.threads.work_executor import WorkExecutorFactory
+
+
+class TestXCrawler(unittest.TestCase):
+    
+    def setUp(self):
+        start_pages = mock_factory.create_mock_pages(10)
+        config = mock.create_autospec(Config).return_value
+        work_executor_factory = mock.create_autospec(WorkExecutorFactory).return_value
+        self.crawler = XCrawler(start_pages, config, work_executor_factory)
+
+    def test_run_argument_empty_start_pages(self):
+        mock_executor = mock.create_autospec(WorkExecutor).return_value
+        self.crawler.work_executor_factory.create_work_executor.return_value = mock_executor
+        self.crawler.start_pages = []
+        self.crawler.run()
+        self.assertFalse(mock_executor.execute_work.called)
+
+    def test_run_argument_non_empty_start_pages(self):
+        mock_executor = mock.create_autospec(WorkExecutor).return_value
+        self.crawler.work_executor_factory.create_work_executor.return_value = mock_executor
+        self.crawler.run()
+        mock_executor.execute_work.assert_called_once_with(self.crawler.start_pages)
+
+

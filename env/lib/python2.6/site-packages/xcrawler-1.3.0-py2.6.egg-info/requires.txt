@@ -1,0 +1,4 @@
+lxml
+cssselect
+six
+requests>=2.4.0
