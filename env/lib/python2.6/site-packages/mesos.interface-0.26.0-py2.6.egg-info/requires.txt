@@ -1,2 +1,0 @@
-google-common>=0.0.1
-protobuf>=2.5.0,<3
