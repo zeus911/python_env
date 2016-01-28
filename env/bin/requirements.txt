@@ -59,7 +59,7 @@ torthrift
 web.py
 websocket-client
 weibo
-xcrawler
+#xcrawler
 xmltodict
 zabbixcli
-
+pexpect
